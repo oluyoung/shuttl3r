@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from knox.models import AuthToken
-from django.contrib.auth.models import User
+from .models import User
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
 
 class RegisterAPI(generics.GenericAPIView):
@@ -10,13 +10,13 @@ class RegisterAPI(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
+        user = serializer.save()
 
-        if not (len(User.objects.filter(email=request.data['email'])) > 0):
-            user = serializer.save()
-        else:
-            return Response({
-                "email": ["A user with that e-mail already exists."]
-            })
+        # if not (len(User.objects.filter(email=request.data['email'])) > 0):
+        # else:
+        #     return Response({
+        #         "email": ["A user with that e-mail already exists."]
+        #     })
 
         # https://stackoverflow.com/questions/55668375/object-of-type-authtoken-is-not-json-serializable
         _, token = AuthToken.objects.create(user)
