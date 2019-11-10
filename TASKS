@@ -1,0 +1,99 @@
+REact and redux on the frontend 
+Django 2.0 rest framework on the backend 
+
+
+First: Learn React 
+	Django rest framework 
+	Learn redux
+
+
+
+
+TASKS : 
+
+Create User model: Email
+			Firstname	
+			Last name
+			Phone number
+			Default pick up address
+			Destination(Drop off address)
+			User active
+			Staff
+			Date user joins
+			(Django rest framework)
+
+
+
+Backend : (POST MAN) Test 
+		Use django for authentication
+		Log in 
+		Sign Up
+		Log Out
+			(All with django rest framework)
+
+			Create Drivers model (Shuttler django)
+				Make paths
+				Make end point
+			Create Car 		(Shuttler django)
+				Make route
+				Meake end point
+
+			Create Shuttle		(Shuttler django)
+				Make route		
+				Make end point 
+
+					TESTING
+				TEST MODEL 
+				ROUTES (Python test)
+
+
+
+Front-end :  Home page (React) 
+		Create UI  Sign up (connect it with the back end) *Activation email*
+		Create UI Log in (connect to the backend) 
+		Create button for log in (connect to the back end)
+
+
+		Hire Driver UI ( freehandng.herokuapp.com)
+		
+		Hire Car Car UI  ( freehandng.herokuapp.com)
+		Shuttle UI   ( freehandng.herokuapp.com)
+
+		Create a User page (Dashboard: Driver : Driver CV (Create. Read. Update. Cancel)
+							Driver order (email customer)
+						 Car : Car Model, License (Create. Read. Update. Cancel)
+							Car order (email user)
+						 Driver : Shuttle route (Create. Read. Update. Cancel)
+							Shuttle order (email user) *see freehandng.herokuapp.com)
+		Update user info (email and texting api)
+		Shuttle: Renew Subscription (email)
+			 Cancel subscription
+		Delete account
+
+
+		Cancel order: AN ORDER CAN BE EDITED UNTIL 5 HOURS BEFORE PICK-UP TIME 
+				(Difference between current time user is trying to edit and pickup time
+					y = user-edit time
+					x = pickup time 
+					order edit = x-y )
+			     ORDER CANCELATION AFTER THE SUPPOSED TIME WILL EVOKE CHARGES BEFORE REFUND
+					
+		
+		
+
+			LINK FRONT-END TO BACK-END
+				
+			Create car order, driver order and shuttle order
+
+
+		
+
+		Contact page TODO
+		
+
+
+		
+
+
+
+
